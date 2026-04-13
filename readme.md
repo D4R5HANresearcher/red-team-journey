@@ -32,9 +32,14 @@ Get hired as a **Red Team Engineer / Junior Penetration Tester** by demonstratin
 
 | Topic | Platform | Status |
 |-------|----------|--------|
+| Linux Basics | LabEx / Linux Journey | ✅ Done |
+| Networking + HTTP Basics | Self Study | ✅ Done |
+| Burp Suite — Intercept & Repeater | Self Practice | ✅ Done |
 | Access Control Vulnerabilities | PortSwigger Web Academy | ✅ Done |
 | IDOR (Insecure Direct Object Reference) | PortSwigger + Bug Bounty Research | ✅ Done |
-| Burp Suite — Intercept & Repeater | Self Practice | ✅ Done |
+| Path Traversal | PortSwigger Web Academy | ✅ Done |
+| Information Disclosure | PortSwigger Web Academy | ✅ Done |
+| Playing Bandit Levels | OverTheWire | ✅ Done |
 | GitHub Portfolio Setup | GitHub | ✅ Done |
 
 ---
