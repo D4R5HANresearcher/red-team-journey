@@ -97,3 +97,38 @@ https://YOUR-LAB-ID.web-security-academy.net/
 WAF checks submitted input → sees no href, no event handlers → Allows it
 Browser renders SVG → animate sets href="javascript:alert(1)" at runtime
 User clicks "Click" → javascript: executes → alert() fires
+
+WAF is fooled because the dangerous value is SET by animation,
+not submitted directly as a static attribute.
+
+---
+
+## 📊 Labs Comparison So Far
+
+| Lab | WAF Blocks | Bypass Method |
+|-----|-----------|---------------|
+| 03 | Most tags | Fuzz allowed tags + events (body onresize) |
+| 04 | All standard tags | Custom tag + autofocus onfocus |
+| 05 | All events + href | SVG animate sets href dynamically |
+
+---
+
+## 💡 Key Takeaway
+When events and href are blocked — think SVG.
+SVG has its own set of tags and attributes
+that behave differently from HTML.
+`<animate>` sets attributes at RUNTIME —
+after the WAF has already checked the input.
+This is a classic WAF bypass technique used in real bug bounties.
+
+---
+
+## 🛠️ Tools Used
+- Browser URL manipulation
+- PortSwigger XSS Cheatsheet (SVG payloads)
+
+---
+
+## 🔗 References
+- https://portswigger.net/web-security/cross-site-scripting/cheat-sheet
+- https://developer.mozilla.org/en-US/docs/Web/SVG/Element/animate
